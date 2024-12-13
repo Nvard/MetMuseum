@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Wrapper for the background image and overlay */
+.background-wrapper {
+    position: relative;
+    height: auto; /* Adjust height automatically based on content */
+    background-image: url('https://cdn.sanity.io/images/cctd4ker/production/f3f99a2b3e7e83350dc452b7242bbd36f651b77c-5121x1707.jpg?w=1920&q=75&auto=format');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Overlay with reduced opacity to darken the image more subtly */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.2); /* Reduced opacity */
+    z-index: 1;
+}
+
+/* Title container centered on the image */
+.title-container {
+    z-index: 2;
+}
+
+.text-white {
+    color: white;
+}
+
+h1.display-3 {
+    font-size: 2rem;
+    font-weight: 500;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Adds shadow for readability */
+    margin-bottom: 20px;
+}
+
+/* Form container (Dropdown & Search) styled over the background image */
+.form-container {
+    z-index: 2;
+    top: 60%; /* Adjust position to place it below the title */
+    transform: translateY(-50%);
+}
+
+.form-container .d-flex {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust gap between dropdown and search input */
+}
+
+.form-container .mb-3 {
+    margin-bottom: 1.5rem;
+}
+
+/* Form components (input group) styling */
+.input-group, .form-group {
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.form-control {
+    border: none;
+    color: #333;
+}
+
+.input-group-text {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+
+/* Make sure the dropdown has consistent width */
+#department.form-control, input.form-control {
+    max-width: 400px; /* Max width */
+    color: darkgray !important; /* Text color grey */
+    background-color: #f8f9fa; /* Optional: Add a light background for visibility */
+    padding: 5px; /* Optional: Ensure padding is consistent */
+}
+
+/* Ensure the text of the options inside the dropdown is also grey */
+#department.form-control option {
+    color: darkgray !important; /* Text color inside the dropdown */
+}
+
+/* Optional: Style the dropdown arrow */
+#department.form-control:focus {
+    border-color: #ced4da; /* Light border color when focused */
+    box-shadow: 0 0 0 0.25rem rgba(38, 143, 255, 0.25); /* Focused state box shadow */
+}
+
+
+/* Container for artworks */
+.container {
+    z-index: 1;
+    margin-top: 30px;
+}
+
+/* Styling for artwork list section */
+.artwork-list {
+    margin-top: 2rem;
+}
+button.search-btn {
+    margin: auto 10px!important;
+    color: gray !important;
+    width: 100px !important;
+    background: beige !important;
+    border: none !important;
+    padding: 5px;
+}
+/* */
+.card-img-left {
+    border: 1px lightgray;
+    border-style: inherit;
+}
+/* search button*/
+.input-group {
+    width: 100%;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity:0.5;
+}
